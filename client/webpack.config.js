@@ -32,6 +32,7 @@ module.exports = () => {
         name: "Offline Editor",
         short_name: "Text Editor",
         description: "Downloadable offline text editor",
+        inject: true,
         background_color: "#FB4F14",
         theme_color: "#002244",
         start_url: "/",
@@ -47,7 +48,26 @@ module.exports = () => {
     ],
 
     module: {
-      rules: [],
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: [
+                "@babel/plugin-proposal-object-rest-spread",
+                "@babel/transform-runtime",
+              ],
+            },
+          },
+        },
+      ],
     },
   };
 };
