@@ -13,10 +13,11 @@ const initdb = async () =>
   });
 
 export const putDb = async (content) => {
+  console.log(content);
   const contactDB = await openDB("jate", 1);
   const tx = contactDB.transaction("jate", "readwrite");
   const store = tx.objectStore("jate");
-  const request = store.put(content, "jate");
+  const request = store.put({ content });
 
   const result = await request;
   return result;
