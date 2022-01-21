@@ -19,6 +19,9 @@ https://offline-editor.herokuapp.com/
 
 Just enter text underneath the header to get started! Click the blue bar at the top of the screen to save your data to the database. On the go? Just click the install button at the top of the screen to download the application to your mobile device and jet!
 
+<img width="1256" alt="Screen Shot 2022-01-21 at 15 42 11" src="https://user-images.githubusercontent.com/88466341/150609745-d705696d-0f87-417c-aac4-fc91bd601dbd.png">
+
+
 ## License
 
 MIT License
